@@ -4,10 +4,13 @@ import com.realnaits.SilkRoads.util.Config;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockFormEvent;
+import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerToggleSprintEvent;
 
@@ -46,6 +49,7 @@ public class Road implements Listener {
                     playersOnRoad.add(player.getUniqueId());
                 }
             }
+
         }else{
             player.setWalkSpeed(0.2f);
             playersOnRoad.remove(player.getUniqueId());
@@ -56,6 +60,17 @@ public class Road implements Listener {
     public void onSprint(PlayerToggleSprintEvent event){
         if (playersOnRoad.contains(event.getPlayer().getUniqueId())){
             event.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    public void onHunger(FoodLevelChangeEvent event){
+        boolean starv = Config.getBoolean("settings.Starv");
+        if (event.getEntity().getType() == (EntityType.PLAYER) && starv){
+            Player player = (Player) event.getEntity();
+            if (playersOnRoad.contains(player.getUniqueId())){
+                event.setCancelled(true);
+            }
         }
     }
 
