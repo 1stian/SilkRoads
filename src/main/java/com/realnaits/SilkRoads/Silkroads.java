@@ -3,6 +3,7 @@ package com.realnaits.SilkRoads;
 import com.realnaits.SilkRoads.commands.Srreload;
 import com.realnaits.SilkRoads.tasks.Road;
 import com.realnaits.SilkRoads.util.Config;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -19,7 +20,7 @@ public class Silkroads extends JavaPlugin {
     public void onEnable(){
         silkroads = this;
         //Metrics
-        //Metrics metrics = new Metrics(this);
+        Metrics metrics = new Metrics(this);
         //Config
         saveDefaultConfig();
         reloadConfig();
