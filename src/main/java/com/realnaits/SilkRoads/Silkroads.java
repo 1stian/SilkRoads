@@ -20,7 +20,8 @@ public class Silkroads extends JavaPlugin {
     public void onEnable(){
         silkroads = this;
         //Metrics
-        Metrics metrics = new Metrics(this);
+        int pluginId = 6975;
+        Metrics metrics = new Metrics(this, pluginId);
         //Config
         saveDefaultConfig();
         reloadConfig();
