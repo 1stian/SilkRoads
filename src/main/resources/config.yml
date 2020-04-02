@@ -1,0 +1,29 @@
+#---------------------------1stian(naits)-------------
+#----------------------------------------------
+#--------------------SilkRoads-----------------
+#-------------SilkRoads------------------------
+#------SilkRoads-------------------------------
+# Created by Stian "1stian" Tofte
+# https://realnaits.com
+#
+
+debug: false
+settings:
+  # What type of blocks you can place below your road.
+  BlockBelowRoad:
+    - "gravel"
+    - "sponge"
+  # What kind of blocks that are a valid road.
+  RoadBlocks:
+    - "stone"
+    - "polished_andesite"
+  # Remove snow
+  Snow: true
+  # Stop starvation
+  Starv: false
+  # Increase walkspeed
+  Walk:
+    # Enable or disable
+    Enabled: true
+    # Speed to choose 0.2 is default walk speed.
+    Speed: 0.24

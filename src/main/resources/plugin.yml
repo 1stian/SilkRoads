@@ -1,0 +1,13 @@
+name: SilkRoads
+version: ${project.version}
+author: Stian "1stian" Tofte
+website: https://realnaits.com
+main: com.realnaits.SilkRoads.Silkroads
+api-version: "1.15"
+prefix: SilkRoads
+commands:
+  srreload:
+    description: Reloads config file
+    usage: /srreload
+    permission: Silkroads.reload
+    permission-message: You do not have access to this command /srreload.
