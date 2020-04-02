@@ -5,7 +5,7 @@
 #------SilkRoads-------------------------------
 # Created by Stian "1stian" Tofte
 # https://realnaits.com
-#
+# https://www.spigotmc.org/members/1stian.575219/
 
 debug: false
 settings:
@@ -17,13 +17,20 @@ settings:
   RoadBlocks:
     - "stone"
     - "polished_andesite"
+    - "polished_andesite_slab"
+    - "smooth_stone_slab"
+    - "stone_brick_slab"
+    - "cobblestone_slab"
+    - "granite_slab"
+    - "polished_granite_slab"
+    - "stone_slab"
   # Remove snow
   Snow: true
-  # Stop starvation
+  # Stop starvation, while on valid roads.
   Starv: false
-  # Increase walkspeed
+  # Increase walk speed.
   Walk:
-    # Enable or disable
+    # Enable or disable.
     Enabled: true
     # Speed to choose 0.2 is default walk speed.
     Speed: 0.24
