@@ -26,11 +26,11 @@ settings:
     - "stone_slab"
   # Remove snow
   Snow: true
-  # Stop starvation, while on valid roads.
+  # Stop starvation, while on valid roads. If sprinting starvation will still decrease.
   Starv: false
   # Increase walk speed.
   Walk:
     # Enable or disable.
     Enabled: true
-    # Speed to choose 0.2 is default walk speed.
+    # Speed to choose. 0.2 is default walk speed. This wil also add some speed for running.
     Speed: 0.24
