@@ -67,8 +67,11 @@ public class Road implements Listener {
         boolean starv = Config.getBoolean("settings.Starv");
         if (event.getEntity().getType() == (EntityType.PLAYER) && starv){
             Player player = (Player) event.getEntity();
-            if (playersOnRoad.contains(player.getUniqueId()) && !player.isSprinting()){
-                event.setCancelled(true);
+
+            if (player.getFoodLevel() > event.getFoodLevel()){
+                if (playersOnRoad.contains(player.getUniqueId()) && !player.isSprinting()){
+                    event.setCancelled(true);
+                }
             }
         }
     }
