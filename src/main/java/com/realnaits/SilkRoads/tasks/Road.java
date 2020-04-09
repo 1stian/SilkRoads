@@ -73,7 +73,6 @@ public class Road implements Listener {
             }
 
             if (playersOnRoad.contains(player.getUniqueId()) && !player.isSprinting()){
-                player.sendMessage("Food cancelled");
                 event.setCancelled(true);
             }
         }
